@@ -5,10 +5,11 @@ using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
 using MyShop.Core.Models;
+using MyShop.Core.Contracts;
 
 namespace MyShop.DataAccess.InMemory
 {
-    public class InMemoryRepository<T> where T : BaseEntity
+    public class InMemoryRepository<T> : IRepository<T> where T : BaseEntity
     {
         private ObjectCache cache = MemoryCache.Default;
         private List<T> items;
