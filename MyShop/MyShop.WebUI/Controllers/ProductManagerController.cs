@@ -66,7 +66,7 @@ namespace MyShop.WebUI.Controllers
                 viewModel.Product = product;
                 viewModel.ProductCategories = categoryContext.Collection();
 
-                return View(product);
+                return View(viewModel);
             }
         }
         [HttpPost]

@@ -6,7 +6,6 @@
 
 <h2>Edit</h2>
 
-@Html.DropDownListFor(model => model.Product.Category, new SelectList(Model.ProductCategories,"Category", "Category"), new { htmlAttributes = new { @class = "form-control" } })
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
